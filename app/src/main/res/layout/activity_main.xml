@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <me.luzhuo.lib_tablayout.TabLayout
+        android:id="@+id/tabLayout3"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/core_colorForeground"/>
+
+    <me.luzhuo.lib_tablayout.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="14dp"
+        app:tab_indicator_corner="2dp"
+        app:tab_indicator_height="4dp"
+        app:tab_indicator_width="17dp"
+        app:tab_text_selectedTextBold="true"
+        app:tab_text_selectedTextColor="#FEFEFE"
+        app:tab_text_normalTextColor="#FEFEFE"
+        app:tab_text_selectedTextSize="20sp"
+        app:tab_text_normalTextSize="15sp"
+        app:tab_indicator_margin_bottom="8dp"
+        app:tab_indicator_color="#FFFFFFFF"
+        app:tab_indicator_colors_start="#FFFFFF"
+        app:tab_indicator_colors_center="#FFFF00"
+        app:tab_indicator_colors_end="#FF0000"
+        android:background="@android:color/holo_orange_light"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,3 @@
+include ':lib_tablayout'
+include ':app'
+rootProject.name = "TabLayoutDemo"

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabLayout">
+        <!-- ViewPager切换时, 是否滚动, 默认true -->
+        <attr name="tab_viewpager_smoothScroll" format="boolean"/>
+
+        <!-- tab是否均分, 默认false, 即不均分, 自适应文本宽度 -->
+        <attr name="tab_spaceEqual" format="boolean"/>
+        <!-- 指定tab的宽度, 默认为0, 即不指定; 并且不建议指定 -->
+        <attr name="tab_width" format="dimension"/>
+        <!-- tab的左右间距 -->
+        <attr name="tab_padding" format="dimension"/>
+
+        <!-- 选中文字的大小 -->
+        <attr name="tab_text_selectedTextSize" format="dimension"/>
+        <attr name="tab_text_normalTextSize" format="dimension"/>
+        <!-- 选中的文字是否加粗, 默认为false, 即不加粗 -->
+        <attr name="tab_text_selectedTextBold" format="boolean"/>
+        <!-- 选中文字的颜色 -->
+        <attr name="tab_text_selectedTextColor" format="color"/>
+        <attr name="tab_text_normalTextColor" format="color"/>
+
+        <!-- 指示器样式, 默认为下划线 -->
+        <attr name="tab_indicator_style" format="enum">
+            <enum name="StyleNormal" value="2"/>
+            <enum name="StyleUnderLine" value="4"/>
+            <enum name="StyleBlock" value="8"/>
+            <enum name="StyleTriangle" value="16"/>
+        </attr>
+        <!-- 指示器的宽度, 默认为0, 即全占满-->
+        <attr name="tab_indicator_width" format="dimension"/>
+        <attr name="tab_indicator_height" format="dimension"/>
+        <attr name="tab_indicator_color" format="color"/>
+        <attr name="tab_indicator_colors_start" format="color"/>
+        <attr name="tab_indicator_colors_center" format="color"/>
+        <attr name="tab_indicator_colors_end" format="color"/>
+        <!-- 指示器渐变颜色的角度, 必须为45的倍数, 默认为0, 如果不是45的倍数, 置为0 -->
+        <attr name="tab_indicator_colors_angle" format="integer"/>
+        <attr name="tab_indicator_corner" format="dimension"/>
+        <attr name="tab_indicator_margin_left" format="dimension"/>
+        <attr name="tab_indicator_margin_top" format="dimension"/>
+        <attr name="tab_indicator_margin_right" format="dimension"/>
+        <attr name="tab_indicator_margin_bottom" format="dimension"/>
+
+        <!-- 分隔线的宽度, 默认为0, 即没有分隔线 -->
+        <attr name="tab_divider_width" format="dimension"/>
+        <attr name="tab_divider_color" format="color"/>
+        <attr name="tab_divider_padding" format="dimension"/>
+
+    </declare-styleable>
+</resources>
