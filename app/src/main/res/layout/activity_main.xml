@@ -12,7 +12,9 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/core_colorForeground"/>
+        android:background="@color/core_colorForeground"
+        app:tab_indicator_margin_right="10dp"
+        app:tab_indicator_margin_left="10dp"/>
 
     <me.luzhuo.lib_tablayout.TabLayout
         android:id="@+id/tabLayout"
