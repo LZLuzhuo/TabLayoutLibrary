@@ -1,5 +1,7 @@
 package me.luzhuo.tablayoutdemo;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,33 +20,28 @@ import me.luzhuo.lib_tablayout.TabLayout;
 /**
  * 滑动时, 背景色跟着渐变
  */
-public class MainActivity2 extends AppCompatActivity {
-    private static final String TAG = MainActivity2.class.getSimpleName();
+public class TableCase1Activity extends AppCompatActivity {
+    private static final String TAG = TableCase1Activity.class.getSimpleName();
     private static List<ViewPagerAdapter.ViewPagerBean> fragments = new ArrayList<>();
-//    private static List<Integer> colors = new ArrayList<>();
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, TableCase1Activity.class));
+    }
 
     static {
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFFb71c1c), "阿双方均是"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFF880e4f), "fsadf"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFF4a148c), "上刊登"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFF311b92), "思考"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFF1a237e), "的交罚款桑德菲杰"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFF004d40), "阿双方均是"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xFFbf360c), "HalloWord"));
-
-//        colors.add(0xFFb71c1c);
-//        colors.add(0xFF880e4f);
-//        colors.add(0xFF4a148c);
-//        colors.add(0xFF311b92);
-//        colors.add(0xFF1a237e);
-//        colors.add(0xFF004d40);
-//        colors.add(0xFFbf360c);
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCCb71c1c), "阿双方均是"));
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCC880e4f), "fsadf"));
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCC4a148c), "上刊登"));
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCC311b92), "思考"));
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCC1a237e), "的交罚款桑德菲杰"));
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCC004d40), "阿双方均是"));
+        fragments.add(new ViewPagerAdapter.ViewPagerBean(MyFragment.instance(0xCCbf360c), "HalloWord"));
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_tablayout_case1);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         ViewPager viewPager = findViewById(R.id.viewpager);
@@ -56,6 +53,21 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 5) {
+                    // 设置白色的文字, 白色的指示器
+                    tabLayout.setSelectedTextColor(0xFFFEFEFE);
+                    tabLayout.setNormalTextColor(0xE6FEFEFE);
+                    tabLayout.setIndicatorColor(0xFFFFFFFF);
+                } else {
+                    // 设置黑色的文字, 渐变的指示器
+                    tabLayout.setSelectedTextColor(0xFF161616);
+                    tabLayout.setNormalTextColor(0xFF3A3A3A);
+                    tabLayout.setIndicatorColors(0xFFEA5F34, 0xFFEB6C3A, 0xFFED9342);
+                }
+            }
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 int scrolledPosition = position; // 0 -> 1 / 1 -> 0
@@ -69,9 +81,6 @@ public class MainActivity2 extends AppCompatActivity {
                         ((BackgroundColor)fragments.get(endPosition).fragment).getCurrentColor()/*colors.get(endPosition)*/);
                 background_color.setBackgroundColor(evaluate);
             }
-
-            @Override
-            public void onPageSelected(int position) { }
 
             @Override
             public void onPageScrollStateChanged(int state) { }

@@ -1,50 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
-    <me.luzhuo.lib_tablayout.TabLayout
-        android:id="@+id/tabLayout3"
-        android:layout_gravity="center_horizontal"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/core_colorForeground"
-        app:tab_indicator_margin_right="10dp"
-        app:tab_indicator_margin_left="10dp"/>
+        android:text="基本使用-均分模式-与系统库的对比"
+        android:onClick="base_average_system"/>
 
-    <me.luzhuo.lib_tablayout.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:paddingBottom="14dp"
-        app:tab_indicator_corner="2dp"
-        app:tab_indicator_height="4dp"
-        app:tab_indicator_width="17dp"
-        app:tab_text_selectedTextBold="true"
-        app:tab_text_selectedTextColor="#FEFEFE"
-        app:tab_text_normalTextColor="#FEFEFE"
-        app:tab_text_selectedTextSize="20sp"
-        app:tab_text_normalTextSize="15sp"
-        app:tab_indicator_margin_bottom="8dp"
-        app:tab_indicator_color="#FFFFFFFF"
-        app:tab_indicator_colors_start="#FFFFFF"
-        app:tab_indicator_colors_center="#FFFF00"
-        app:tab_indicator_colors_end="#FF0000"
-        android:background="@android:color/holo_orange_light"/>
+        android:text="基本使用-滚动模式-与系统库的对比"
+        android:onClick="base_scroll_system"/>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="基本使用-不使用ViewPager"
+        android:onClick="base_no_viewpager"/>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进阶使用-指示器样式"
+        android:onClick="table_style_indicator"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进阶使用-渐变的指示器"
+        android:onClick="table_indicator2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进阶使用-案例-更新背景色"
+        android:onClick="table_case1"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

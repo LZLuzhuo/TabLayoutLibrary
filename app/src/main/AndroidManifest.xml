@@ -9,12 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TabLayoutDemo">
-        <activity android:name=".MainActivity2">
+        <activity android:name=".MainActivity">
+<!--        <activity android:name=".IndicatorStyleActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BaseAverageSystemActivity" />
+        <activity android:name=".BaseScrollSystemActivity" />
+        <activity android:name=".IndicatorStyleActivity" />
+        <activity android:name=".Indicator2Activity" />
+        <activity android:name=".TableCase1Activity" />
+        <activity android:name=".BaseNoViewPagerActivity" />
     </application>
 
 </manifest>

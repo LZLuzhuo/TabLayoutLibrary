@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <me.luzhuo.lib_tablayout.TabLayout
+        android:id="@+id/tabLayout_style0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:tab_padding="15dp"
+        app:tab_indicator_style="StyleNormal"/>
+
+    <me.luzhuo.lib_tablayout.TabLayout
+        android:id="@+id/tabLayout_style1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:tab_padding="15dp"
+        app:tab_indicator_corner="10dp"
+        app:tab_indicator_margin_left="15dp"
+        app:tab_indicator_margin_right="15dp"
+        app:tab_indicator_style="StyleUnderLine"/>
+
+    <me.luzhuo.lib_tablayout.TabLayout
+        android:id="@+id/tabLayout_style2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:tab_padding="15dp"
+        app:tab_indicator_margin_top="5dp"
+        app:tab_indicator_margin_bottom="5dp"
+        app:tab_indicator_margin_left="5dp"
+        app:tab_indicator_margin_right="5dp"
+        app:tab_indicator_height="0dp"
+        app:tab_indicator_corner="10dp"
+        app:tab_indicator_color="#4Dff00ff"
+        app:tab_indicator_style="StyleBlock"/>
+
+    <me.luzhuo.lib_tablayout.TabLayout
+        android:id="@+id/tabLayout_style3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:tab_padding="15dp"
+        app:tab_indicator_height="5dp"
+        app:tab_indicator_width="8dp"
+        app:tab_indicator_style="StyleTriangle"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

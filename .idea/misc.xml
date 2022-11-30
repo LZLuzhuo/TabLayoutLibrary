@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_base_average_system.xml" value="0.10294117647058823" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_base_scroll_system.xml" value="0.25181159420289856" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_indicator_2.xml" value="0.1828125" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_main.xml" value="0.25181159420289856" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_main2.xml" value="0.17083333333333334" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_main3.xml" value="0.25181159420289856" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_no_viewpager.xml" value="0.1" />
+        <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/app/src/main/res/layout/activity_style_indicator.xml" value="0.20416666666666666" />
         <entry key="..\:/Code/PersonalProject/Android/Libraries/TabLayoutLibrary/lib_tablayout/src/main/res/layout/tablayout_tab_text.xml" value="0.1875" />
       </map>
     </option>

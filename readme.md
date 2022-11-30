@@ -8,7 +8,7 @@ implementation 'me.luzhuo.android:lib_tablayout:1.0.9'
 
 # 2. 使用文档
 
-https://www.yuque.com/luzhuo/library/ei2setg40askm5vo
+https://www.yuque.com/luzhuo/library/lib_tablayout
 
 # 3. 版权
 

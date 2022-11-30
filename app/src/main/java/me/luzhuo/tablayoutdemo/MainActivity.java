@@ -1,79 +1,45 @@
 package me.luzhuo.tablayoutdemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-import me.luzhuo.lib_core.ui.adapter.ViewPagerAdapter;
-import me.luzhuo.lib_tablayout.TabLayout;
-import me.luzhuo.lib_tablayout.callback.OnTabSelectedListener;
-
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
 
-import java.util.ArrayList;
-import java.util.List;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
-    private static List<ViewPagerAdapter.ViewPagerBean> fragments = new ArrayList<>();
-
-    static {
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "阿双方均是"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "fsadf"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "上刊登"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "思考"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "的交罚款桑德菲杰"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "阿双方均是"));
-        fragments.add(new ViewPagerAdapter.ViewPagerBean(new MyFragment(), "HalloWord"));
-    }
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
-        com.google.android.material.tabs.TabLayout tabLayout2 = findViewById(R.id.tabLayout2);
+    // 基本使用-均分模式-与系统库的对比
+    public void base_average_system(View view) {
+        BaseAverageSystemActivity.start(this);
+    }
 
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        viewPager.setAdapter(new ViewPagerAdapter(this, fragments));
-        viewPager.setCurrentItem(0);
-        viewPager.setOffscreenPageLimit(fragments.size());
+    // 基本使用-滚动模式-与系统库的对比
+    public void base_scroll_system(View view) {
+        BaseScrollSystemActivity.start(this);
+    }
 
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout2.setupWithViewPager(viewPager);
+    // 基本使用-不使用ViewPager
+    public void base_no_viewpager(View view) {
+        BaseNoViewPagerActivity.start(this);
+    }
 
-        tabLayout.setTitles(new String[]{"阿双方均是", "fsadf", "上刊登", "思考", "的交罚款桑德菲杰", "阿双方均是", "HalloWord"});
-        //tabLayout.setCurrentTab(2);
+    // 进阶使用-指示器样式
+    public void table_style_indicator(View view) {
+        IndicatorStyleActivity.start(this);
+    }
 
-        tabLayout.setTabLayoutListener(new OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(int position) {
-                if (position == 0 || position == 4) {
-                    // 设置白色的文字, 白色的指示器
-                    tabLayout.setSelectedTextColor(0xFFFEFEFE);
-                    tabLayout.setNormalTextColor(0xE6FEFEFE);
-                    tabLayout.setIndicatorColor(0xFFFFFFFF);
-                } else {
-                    // 设置黑色的文字, 渐变的指示器
-                    tabLayout.setSelectedTextColor(0xFF161616);
-                    tabLayout.setNormalTextColor(0xFF3A3A3A);
-                    tabLayout.setIndicatorColors(0xFFEA5F34, 0xFFEB6C3A, 0xFFED9342);
-                }
-                Log.e(TAG, "onTabSelected: " + position);
-            }
+    // 进阶使用-渐变的指示器
+    public void table_indicator2(View view) {
+        Indicator2Activity.start(this);
+    }
 
-            @Override
-            public void onTabUnselected(int position) {
-                Log.e(TAG, "onTabUnselected: " + position);
-            }
-
-            @Override
-            public void onTabReselected(int position) {
-                Log.e(TAG, "onTabReselected: " + position);
-            }
-        });
-
-        TabLayout tabLayout3 = findViewById(R.id.tabLayout3);
-        tabLayout3.setupWithViewPager(viewPager);
+    // 进阶使用-案例-更新背景色
+    public void table_case1(View view) {
+        TableCase1Activity.start(this);
     }
 }

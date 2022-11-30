@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/background_color"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <me.luzhuo.lib_tablayout.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:tab_padding="15dp"
+            app:tab_indicator_margin_right="10dp"
+            app:tab_indicator_margin_left="10dp"
+            app:tab_indicator_colors_start="#FFEA5F34"
+            app:tab_indicator_colors_center="#FFEB6C3A"
+            app:tab_indicator_colors_end="#FFED9342"
+            app:tab_text_normalTextColor="#FF3A3A3A"
+            app:tab_text_selectedTextColor="#FF161616"
+            app:tab_text_selectedTextBold="true"
+            app:tab_text_selectedTextSize="16sp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
