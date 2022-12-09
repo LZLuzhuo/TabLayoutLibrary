@@ -3,7 +3,7 @@ TabLayout库
 # 1. 导包
 
 ```groovy
-implementation 'me.luzhuo.android:lib_tablayout:1.0.9'
+implementation 'me.luzhuo.android:lib_tablayout:1.0.11'
 ```
 
 # 2. 使用文档
